@@ -1,4 +1,4 @@
-var socket = io("https://ledcube2019.herokuapp.com")
+var socket = io("http://localhost:3000")
 
 $(document).ready(function()
 {
@@ -22,7 +22,7 @@ $(document).ready(function()
 	{
 		socket.emit("CLIENT-SEND-MODE-OFF")
 	})
-	$("#btnLamp").click(function()
+	$("#mhx").click(function()
 	{
 		socket.emit("CLIENT-SEND-MODE-LAMP")
 	})
@@ -32,39 +32,39 @@ $(document).ready(function()
 
 socket.on("SERVER-SEND-RAIN-MODE", function(data)
 {
-	alert("Đã chọn hiệu ứng mưa")
+	//alert("Đã chọn hiệu ứng mưa")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
 socket.on("SERVER-SEND-LOVE-MODE", function(data)
 {
-	alert("Đã chọn hiệu ứng love")
+	//alert("Đã chọn hiệu ứng love")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
 socket.on("SERVER-SEND-PLAN-MODE", function(data)
 {
-	alert("Đã chọn hiệu ứng plan")
+	//alert("Đã chọn hiệu ứng plan")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
 
 socket.on("SERVER-SEND-DOMINO-MODE", function(data)
 {
-	alert("Đã chọn hiệu ứng domino")
+	//alert("Đã chọn hiệu ứng domino")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
 socket.on("SERVER-SEND-OFF-MODE", function(data)
 {
-	alert("Đã tắt tất cả cả đèn")
+	//alert("Đã tắt tất cả cả đèn")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
 
 socket.on("SERVER-SEND-LAMP-MODE", function(data)
 {
-	alert("Đã chọn hiệu ứng đèn ngủ")
+	//alert("Đã chọn hiệu ứng đèn ngủ")
 	$("#boxMode").html("")
 	$("#boxMode").html(data.MODE)
 })
