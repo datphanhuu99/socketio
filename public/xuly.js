@@ -1,4 +1,4 @@
-var socket = io("http://localhost:3000")
+var socket = io("https://appdemox1.herokuapp.com")
 
 $(document).ready(function()
 {
